@@ -5,7 +5,7 @@
 ## Grob-Planung
 
 1. Erklären Sie Ihre Projekt-Idee in einem Satz, als müssen Sie einen Investor davon überzeugen.
-   Ich möchte einen Vokabel Trainer fürs Handy erstellen
+   Ich möchte einen Vokabeltrainer fürs Handy erstellen
 3. Erklären Sie, welche technischen Herausforderungen Sie in Ihrem Projekt erwarten.
    Ich werde eine neue Technologie (Avalonia) erlernen für eine Mobileapplikattion.
 4. Beschreiben Sie, welche nicht-technischen Aspekte Sie in diesem Projekt besonders üben möchten.
@@ -15,13 +15,13 @@
 ## 14.8
 
 - [X] Avalonia herunterladen
-- [ ] Tutorial auf der Avalonia Webseite durcharbeiten https://docs.avaloniaui.net/docs/get-started/starter-tutorial
-- [ ] TestProjekt zum selberausprobieren erstellen
+- [ ] Tutorial auf der Avalonia Webseite durcharbeiten: https://docs.avaloniaui.net/docs/get-started/starter-tutorial
+- [ ] Testprojekt zum Selberausprobieren erstellen
 
-Heute habe ich damit begonnen mir eine Projekt zu überlegen, wobei ich mich auf einen Vokabel Trainer festgelegt habe. Danach habe ich anhand des Tutorials auf der Avalonia Seite Avalonia heruntergeladen. Ich hatte ein paar Technische Probleme, weswegen es etwas länger gedauert hatte. Danach habe ich das Tutorialprojekt auf der Seite gestartet und bin noch mittendrin.
+Heute habe ich damit begonnen, mir ein Projekt zu überlegen, wobei ich mich auf einen Vokabeltrainer festgelegt habe. Danach habe ich anhand des Tutorials auf der Avalonia Seite Avalonia heruntergeladen. Ich hatte ein paar technische Probleme, weswegen es etwas länger gedauert hatte. Danach habe ich das Tutorialprojekt auf der Seite gestartet und bin noch mittendrin.
 
 ## 21.8
 
 - [X] Tutorial nächste 2 Kapitel abschliessen
 - [ ] Tutorial beenden
-- [ ] TestProjekt zum selberausprobieren erstellen
+- [ ] Testprojekt zum Selberausprobieren erstellen
