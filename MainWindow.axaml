@@ -1,16 +1,17 @@
 ﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:GetStartedApp.ViewModels"
+        xmlns:vm="using:TestProjekt1.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
-        x:Class="GetStartedApp.Views.MainWindow"
+        x:Class="TestProjekt1.Views.MainWindow"
         x:DataType="vm:MainViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="GetStartedApp"
+        Title="TestProjekt1"
         Width="400" 
         Height="450">
 
+    
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
@@ -18,24 +19,27 @@
     </Design.DataContext>
 
     <StackPanel>
-        <Border Margin="5" CornerRadius="10" Background="LightBlue">
 
-            <TextBlock Margin="5" FontSize="24" HorizontalAlignment="Center" Text="Temperature Converter"> </TextBlock>
-
+        <Border Margin="5" CornerRadius="10" Background="Gray" Padding="10">
+            <TextBlock Text="Vermögenensübersicht" FontSize="24" HorizontalAlignment="Center" />
         </Border>
-        <Grid ShowGridLines="True" Margin="5" ColumnDefinitions="120,100" RowDefinitions="Auto,Auto">
 
-            <TextBlock Grid.Row="0" Grid.Column="0" Margin="10">Celsius</TextBlock>
-            <TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0" />
-            <TextBlock Grid.Row="1" Grid.Column="0" Margin="10">Fahrenheit</TextBlock>
-            <TextBox Grid.Row="1" Grid.Column="1" Margin="0 5" Text="0" />
-
+        <Grid ShowGridLines="True" Margin="5" ColumnDefinitions="120,260" RowDefinitions="Auto,Auto,Auto,50">
+            <TextBlock Text="Vermögen" FontSize="19" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center"/>
+            <TextBlock Text="0" FontSize="19" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Name="Vermögen"/>
+            <TextBlock Text="Einnahmen" FontSize="19" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center"/>
+            <TextBlock Text="0" FontSize="19" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Name="Einnahmen"/>
+            <TextBlock Text="Ausgaben" FontSize="19" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center"/>
+            <TextBlock Text="0" FontSize="19" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Name="Ausgaben"/>
         </Grid>
 
-       <Button HorizontalAlignment="Center" Click="Button_OnClick">Calculate</Button>
-    
+        <Grid ShowGridLines="True" Margin="5" ColumnDefinitions="120,260" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+            <TextBlock Text="Neue Einnahmen" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Text="Neue Ausgaben" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox Text="0" Grid.Row="0" Grid.Column="1" Margin="5" Name="NeueEinnahmen"/>
+            <TextBox Text="0" Grid.Row="1" Grid.Column="1" Margin="5" Name="NeueAusgaben"/>  
+        </Grid>
+
+        <Button HorizontalAlignment="Center" Click="Button_OnClick" >Berechnen</Button>
     </StackPanel>
-
 </Window>
-
-<!-- Momentan bei Inserting controls in the grid Nummer 2 -->

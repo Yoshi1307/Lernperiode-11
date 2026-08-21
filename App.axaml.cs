@@ -1,10 +1,10 @@
 ﻿using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using GetStartedApp.ViewModels;
-using GetStartedApp.Views;
+using TestProjekt1.ViewModels;
+using TestProjekt1.Views;
 
-namespace GetStartedApp;
+namespace TestProjekt1;
 
 public partial class App : Application
 {

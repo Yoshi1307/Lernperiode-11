@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using System;
 
-namespace GetStartedApp;
+namespace TestProjekt1;
 
 sealed class Program
 {

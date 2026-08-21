@@ -2,9 +2,9 @@
 using System.Diagnostics.CodeAnalysis;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using GetStartedApp.ViewModels;
+using TestProjekt1.ViewModels;
 
-namespace GetStartedApp;
+namespace TestProjekt1;
 
 /// <summary>
 /// Given a view model, returns the corresponding view if possible.
