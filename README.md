@@ -30,6 +30,6 @@ Heute habe ich als erstes das Tutorial beendet. Dies kann man momentan nicht ein
 
 ## 28.8
 
-- [ ] Layout für die Startseite erstellen.
-- [ ] Wörterliste erstellen.
-- [ ] Abfrage von einem Wort hinzufügen.
+- [ ] Als User möchte ich eine übersichtliche Startseite haben, damit ich mich einfach in der Anwendung zurechtfinde.
+- [ ] Als User möchte ich eine Liste mit den Wörtern sehen, damit ich die verfügbaren Wörter kennenlernen kann.
+- [ ] Als User möchte ich ein Wort abgefragt werden können, damit ich es übersetzen kann.
