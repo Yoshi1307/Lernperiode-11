@@ -23,5 +23,13 @@ Heute habe ich damit begonnen, mir ein Projekt zu überlegen, wobei ich mich auf
 ## 21.8
 
 - [X] Tutorial nächste 2 Kapitel abschliessen
-- [ ] Tutorial beenden
-- [ ] Testprojekt zum Selberausprobieren erstellen
+- [X] Tutorial beenden
+- [X] Testprojekt zum Selberausprobieren erstellen
+
+Heute habe ich als erstes das Tutorial beendet. Dies kann man momentan nicht einsehen, weil ich die Dateien ersetzt habe. Danch habe ich einen kleinen Vermögensrechner erstellt wo man die ein und Ausgaben eingeben kann und sieht wie viel Geld man noch übrig hat.
+
+## 28.8
+
+- [ ] Layout für die Startseite erstellen.
+- [ ] Wörterliste erstellen.
+- [ ] Abfrage von einem Wort hinzufügen.
