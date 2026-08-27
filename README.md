@@ -30,6 +30,13 @@ Heute habe ich als erstes das Tutorial beendet. Dies kann man momentan nicht ein
 
 ## 28.8
 
-- [ ] Als User möchte ich eine übersichtliche Startseite haben, damit ich mich einfach in der Anwendung zurechtfinde.
-- [ ] Als User möchte ich eine Liste mit den Wörtern sehen, damit ich die verfügbaren Wörter kennenlernen kann.
-- [ ] Als User möchte ich ein Wort abgefragt werden können, damit ich es übersetzen kann.
+- [X] Als User möchte ich eine übersichtliche Startseite haben, damit ich mich einfach in der Anwendung zurechtfinde.
+- [X] Als User möchte ich eine Liste mit den Wörtern sehen, damit ich die verfügbaren Wörter kennenlernen kann.
+- [X] Als User möchte ich ein Wort abgefragt werden können, damit ich es übersetzen kann.
+
+Heute habe ich zuerst ein kleines Startmenü gemacht, damit ich auswählen kann, was ich machen will. Im Menü kann man die ganze Zeit ohne weitere Knöpfe zu drücken zwischen den Seiten wechseln. Danach habe ich eine Wortliste mit 5 einfachen Englisch Wörtern hinzugefügt, für die ich am Ende eine Abfrage gestaltet habe. Dazwischen habe ich eine Anzeige der Wörter mit Übersetzung gemacht, dass man sich die Wörter zuerst anschauen kann. 
+
+## 4.9
+- [ ] Als User möchte ich eine grössere Anzahl Wörter zum Abfragen haben, damit ich nicht nur die gleichen 5 Wörter üben muss.
+- [ ] Als User möchte ich eine andere Sprache zur auswahl haben, damit ich nicht nur englisch lernen muss.
+- [ ] Als user möchte ich, dass jedes Wort zuerst einmal dran kommt bevor eines sich wiederholt, damit ich jedes Wort lernen kann bevor es sich wiederholt
