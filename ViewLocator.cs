@@ -2,9 +2,9 @@
 using System.Diagnostics.CodeAnalysis;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using TestProjekt1.ViewModels;
+using VociTrainer.ViewModels;
 
-namespace TestProjekt1;
+namespace VociTrainer;
 
 /// <summary>
 /// Given a view model, returns the corresponding view if possible.

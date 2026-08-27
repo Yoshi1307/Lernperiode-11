@@ -1,10 +1,10 @@
 ﻿using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using TestProjekt1.ViewModels;
-using TestProjekt1.Views;
+using VociTrainer.ViewModels;
+using VociTrainer.Views;
 
-namespace TestProjekt1;
+namespace VociTrainer;
 
 public partial class App : Application
 {

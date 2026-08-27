@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using System;
 
-namespace TestProjekt1;
+namespace VociTrainer;
 
 sealed class Program
 {

@@ -1,7 +1,7 @@
 ﻿<Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="TestProjekt1.App"
-             xmlns:local="using:TestProjekt1"
+             x:Class="VociTrainer.App"
+             xmlns:local="using:VociTrainer"
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 

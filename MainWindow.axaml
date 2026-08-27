@@ -1,45 +1,49 @@
 ﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:TestProjekt1.ViewModels"
+        xmlns:vm="using:VociTrainer.ViewModels"
+        xmlns:models="using:VociTrainer.Models"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
-        x:Class="TestProjekt1.Views.MainWindow"
+        x:Class="VociTrainer.Views.MainWindow"
         x:DataType="vm:MainViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="TestProjekt1"
-        Width="400" 
-        Height="450">
+        Title="VociTrainer">
 
-    
     <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainViewModel />
     </Design.DataContext>
 
-    <StackPanel>
+    <TabControl>
+        <TabItem Header="Start">
+            <StackPanel Margin="20" Spacing="10">
+                <TextBlock Text="VociTrainer" FontSize="20" FontWeight="Bold" />
+                </StackPanel>
+        </TabItem>
 
-        <Border Margin="5" CornerRadius="10" Background="Gray" Padding="10">
-            <TextBlock Text="Vermögenensübersicht" FontSize="24" HorizontalAlignment="Center" />
-        </Border>
+        <TabItem Header="Wortliste">
+            <ListBox Margin="20" ItemsSource="{Binding Words}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate DataType="models:Word">
+                        <StackPanel Orientation="Horizontal" Spacing="10">
+                            <TextBlock Text="{Binding German}" FontWeight="Bold" Width="100" />
+                            <TextBlock Text="=" />
+                            <TextBlock Text="{Binding English}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </TabItem>
 
-        <Grid ShowGridLines="True" Margin="5" ColumnDefinitions="120,260" RowDefinitions="Auto,Auto,Auto,50">
-            <TextBlock Text="Vermögen" FontSize="19" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center"/>
-            <TextBlock Text="0" FontSize="19" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Name="Vermögen"/>
-            <TextBlock Text="Einnahmen" FontSize="19" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center"/>
-            <TextBlock Text="0" FontSize="19" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Name="Einnahmen"/>
-            <TextBlock Text="Ausgaben" FontSize="19" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center"/>
-            <TextBlock Text="0" FontSize="19" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Name="Ausgaben"/>
-        </Grid>
+        <TabItem Header="Abfrage">
+            <StackPanel Margin="20" Spacing="15">
+                <TextBlock Text="Wie heisst dieses Wort auf Englisch?" />
+                <TextBlock Text="{Binding CurrentWord.German}" FontSize="24" FontWeight="Bold" />
+                <TextBox Text="{Binding UserAnswer}" Watermark="Deine Antwort" />
+                <Button Content="Prüfen" Command="{Binding CheckAnswerCommand}" />
+                <TextBlock Text="{Binding FeedbackText}" TextWrapping="Wrap" />
+            </StackPanel>
+        </TabItem>
+    </TabControl>
 
-        <Grid ShowGridLines="True" Margin="5" ColumnDefinitions="120,260" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
-            <TextBlock Text="Neue Einnahmen" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBlock Text="Neue Ausgaben" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox Text="0" Grid.Row="0" Grid.Column="1" Margin="5" Name="NeueEinnahmen"/>
-            <TextBox Text="0" Grid.Row="1" Grid.Column="1" Margin="5" Name="NeueAusgaben"/>  
-        </Grid>
-
-        <Button HorizontalAlignment="Center" Click="Button_OnClick" >Berechnen</Button>
-    </StackPanel>
 </Window>

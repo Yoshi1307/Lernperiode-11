@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace TestProjekt1.ViewModels;
+namespace VociTrainer.ViewModels;
 
 public abstract class ViewModelBase : ObservableObject
 {
