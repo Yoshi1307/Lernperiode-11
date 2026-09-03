@@ -40,3 +40,5 @@ Heute habe ich zuerst ein kleines Startmenü gemacht, damit ich auswählen kann,
 - [ ] Als User möchte ich eine grössere Anzahl Wörter zum Abfragen haben, damit ich nicht nur die gleichen 5 Wörter üben muss.
 - [ ] Als User möchte ich eine andere Sprache zur auswahl haben, damit ich nicht nur englisch lernen muss.
 - [ ] Als user möchte ich, dass jedes Wort zuerst einmal dran kommt bevor eines sich wiederholt, damit ich jedes Wort lernen kann bevor es sich wiederholt
+
+Heute habe ich zuerst 15 neue Wörter hinzugefügt die man Lernen kann. 
