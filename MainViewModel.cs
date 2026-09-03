@@ -17,6 +17,21 @@ public partial class MainViewModel : ViewModelBase
         new Word { German = "Katze", English = "cat" },
         new Word { German = "Buch", English = "book" },
         new Word { German = "Wasser", English = "water" },
+        new Word { German = "Tisch", English = "table" },
+        new Word { German = "Stuhl", English = "chair" },
+        new Word { German = "Auto", English = "car" },
+        new Word { German = "Apfel", English = "apple" },
+        new Word { German = "Brot", English = "bread" },
+        new Word { German = "Schule", English = "school" },
+        new Word { German = "Hausaufgabe", English = "homework" },
+        new Word { German = "Freund", English = "friend" },
+        new Word { German = "Familie", English = "family" },
+        new Word { German = "Sonne", English = "sun" },
+        new Word { German = "Mond", English = "moon" },
+        new Word { German = "Baum", English = "tree" },
+        new Word { German = "Stadt", English = "city" },
+        new Word { German = "Buch", English = "book" },
+        new Word { German = "Schule", English = "school" },
     };
 
     [ObservableProperty]
