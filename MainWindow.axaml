@@ -21,29 +21,57 @@
                 </StackPanel>
         </TabItem>
 
-        <TabItem Header="Wortliste">
-            <ListBox Margin="20" ItemsSource="{Binding Words}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate DataType="models:Word">
-                        <StackPanel Orientation="Horizontal" Spacing="10">
-                            <TextBlock Text="{Binding German}" FontWeight="Bold" Width="100" />
-                            <TextBlock Text="=" />
-                            <TextBlock Text="{Binding English}" />
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+       <TabItem Header="Wortliste">
+            <ScrollViewer>
+                <StackPanel Margin="20" Spacing="10">
+                    <TextBlock Text="Englisch Wörter" FontSize="20" FontWeight="Bold" />
+
+                    <ListBox ItemsSource="{Binding WordsE}"
+                             ScrollViewer.VerticalScrollBarVisibility="Visible">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate DataType="models:Word">
+                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                    <TextBlock Text="{Binding GermanE}" FontWeight="Bold" Width="100" />
+                                    <TextBlock Text="=" />
+                                    <TextBlock Text="{Binding English}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <TextBlock Text="Französisch Wörter" FontSize="20" FontWeight="Bold" />
+                     <ListBox ItemsSource="{Binding WordsF}"
+                             ScrollViewer.VerticalScrollBarVisibility="Visible">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate DataType="models:Word">
+                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                    <TextBlock Text="{Binding GermanF}" FontWeight="Bold" Width="100" />
+                                    <TextBlock Text="=" />
+                                    <TextBlock Text="{Binding French}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </ScrollViewer>
         </TabItem>
 
-        <TabItem Header="Abfrage">
-            <StackPanel Margin="20" Spacing="15">
-                <TextBlock Text="Wie heisst dieses Wort auf Englisch?" />
-                <TextBlock Text="{Binding CurrentWord.German}" FontSize="24" FontWeight="Bold" />
+
+
+    <TabItem Header="Abfrage">
+        <StackPanel Margin="20" Spacing="15">
+            <ComboBox x:Name="LanguageCombo" SelectedIndex="0" HorizontalAlignment="Left">
+        <ComboBoxItem Content="Englisch" />
+        <ComboBoxItem Content="Französisch" />
+    </ComboBox>
+    <TextBlock x:CompileBindings="False"
+           Text="{Binding #LanguageCombo.SelectedItem.Content, StringFormat='Wie heisst dieses Wort auf {0}?'}" />
+                <TextBlock Text="{Binding CurrentWord.GermanE}" FontSize="24" FontWeight="Bold" />
                 <TextBox Text="{Binding UserAnswer}" Watermark="Deine Antwort" />
-                <Button Content="Prüfen" Command="{Binding CheckAnswerCommand}" />
-                <TextBlock Text="{Binding FeedbackText}" TextWrapping="Wrap" />
-            </StackPanel>
-        </TabItem>
+            <Button Content="Prüfen" Command="{Binding CheckAnswerCommand}" />
+            <TextBlock Text="{Binding FeedbackText}" TextWrapping="Wrap" />
+        </StackPanel>
+    </TabItem>
     </TabControl>
 
 </Window>

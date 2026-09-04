@@ -10,28 +10,50 @@ public partial class MainViewModel : ViewModelBase
 {
     private readonly Random _random = new();
 
-    public ObservableCollection<Word> Words { get; } = new()
+    public ObservableCollection<Word> WordsE { get; } = new()
     {
-        new Word { German = "Haus", English = "house" },
-        new Word { German = "Hund", English = "dog" },
-        new Word { German = "Katze", English = "cat" },
-        new Word { German = "Buch", English = "book" },
-        new Word { German = "Wasser", English = "water" },
-        new Word { German = "Tisch", English = "table" },
-        new Word { German = "Stuhl", English = "chair" },
-        new Word { German = "Auto", English = "car" },
-        new Word { German = "Apfel", English = "apple" },
-        new Word { German = "Brot", English = "bread" },
-        new Word { German = "Schule", English = "school" },
-        new Word { German = "Hausaufgabe", English = "homework" },
-        new Word { German = "Freund", English = "friend" },
-        new Word { German = "Familie", English = "family" },
-        new Word { German = "Sonne", English = "sun" },
-        new Word { German = "Mond", English = "moon" },
-        new Word { German = "Baum", English = "tree" },
-        new Word { German = "Stadt", English = "city" },
-        new Word { German = "Buch", English = "book" },
-        new Word { German = "Schule", English = "school" },
+        new Word { GermanE = "Haus", English = "house" },
+        new Word { GermanE = "Hund", English = "dog" },
+        new Word { GermanE = "Katze", English = "cat" },
+        new Word { GermanE = "Buch", English = "book" },
+        new Word { GermanE = "Wasser", English = "water" },
+        new Word { GermanE = "Tisch", English = "table" },
+        new Word { GermanE = "Stuhl", English = "chair" },
+        new Word { GermanE = "Auto", English = "car" },
+        new Word { GermanE = "Apfel", English = "apple" },
+        new Word { GermanE = "Brot", English = "bread" },
+        new Word { GermanE = "Schule", English = "school" },
+        new Word { GermanE = "Hausaufgabe", English = "homework" },
+        new Word { GermanE = "Freund", English = "friend" },
+        new Word { GermanE = "Familie", English = "family" },
+        new Word { GermanE = "Sonne", English = "sun" },
+        new Word { GermanE = "Mond", English = "moon" },
+        new Word { GermanE = "Baum", English = "tree" },
+        new Word { GermanE = "Stadt", English = "city" },
+
+
+    };
+
+    public ObservableCollection<Word> WordsF { get; } = new()
+    {
+              new Word { GermanF = "Haus", French = "maison" },
+        new Word { GermanF = "Hund", French = "chien" },
+        new Word { GermanF = "Katze", French = "chat" },
+        new Word { GermanF = "Buch", French = "livre" },
+        new Word { GermanF = "Wasser", French = "eau" },
+        new Word { GermanF = "Tisch", French = "table" },
+        new Word { GermanF = "Stuhl", French = "chaise" },
+        new Word { GermanF = "Auto", French = "voiture" },
+        new Word { GermanF = "Apfel", French = "pomme" },
+        new Word { GermanF = "Brot", French = "pain" },
+        new Word { GermanF = "Schule", French = "école" },
+        new Word { GermanF = "Hausaufgabe", French = "devoirs" },
+        new Word { GermanF = "Freund", French = "ami" },
+        new Word { GermanF = "Familie", French = "famille" },
+        new Word { GermanF = "Sonne", French = "soleil" },
+        new Word { GermanF = "Mond", French = "lune" },
+        new Word { GermanF = "Baum", French = "arbre" },
+        new Word { GermanF = "Stadt", French = "ville" },
     };
 
     [ObservableProperty]
@@ -45,7 +67,7 @@ public partial class MainViewModel : ViewModelBase
 
     public MainViewModel()
     {
-        _currentWord = Words[_random.Next(Words.Count)];
+        _currentWord = WordsE[_random.Next(WordsE.Count)];
     }
 
     [RelayCommand]
@@ -61,6 +83,6 @@ public partial class MainViewModel : ViewModelBase
         }
 
         UserAnswer = "";
-        CurrentWord = Words[_random.Next(Words.Count)];
+        CurrentWord = WordsE[_random.Next(WordsE.Count)];
     }
 }

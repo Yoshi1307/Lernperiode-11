@@ -8,6 +8,9 @@ namespace VociTrainer.Models;
 
 public class Word
 {
-    public string German { get; set; } = "";
+    public string GermanE { get; set; } = "";
     public string English { get; set; } = "";
+
+    public string GermanF { get; set; } = "";
+    public string French { get; set; } = ""; 
 }
