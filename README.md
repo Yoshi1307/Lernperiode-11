@@ -15,18 +15,18 @@
 ## 14.8
 
 - [X] Avalonia herunterladen
-- [ ] Tutorial auf der Avalonia Webseite durcharbeiten: https://docs.avaloniaui.net/docs/get-started/starter-tutorial
-- [ ] Testprojekt zum Selberausprobieren erstellen
+- [ ] Tutorial auf der Avalonia-Webseite durcharbeiten: https://docs.avaloniaui.net/docs/get-started/starter-tutorial
+- [ ] Testprojekt zum Selber ausprobieren erstellen
 
-Heute habe ich damit begonnen, mir ein Projekt zu überlegen, wobei ich mich auf einen Vokabeltrainer festgelegt habe. Danach habe ich anhand des Tutorials auf der Avalonia Seite Avalonia heruntergeladen. Ich hatte ein paar technische Probleme, weswegen es etwas länger gedauert hatte. Danach habe ich das Tutorialprojekt auf der Seite gestartet und bin noch mittendrin.
+Heute habe ich damit begonnen, mir ein Projekt zu überlegen, wobei ich mich auf einen Vokabeltrainer festgelegt habe. Danach habe ich anhand des Tutorials auf der Avalonia Seite Avalonia heruntergeladen. Ich hatte ein paar technische Probleme, weswegen es etwas länger gedauert hat. Danach habe ich das Tutorialprojekt auf der Seite gestartet und bin noch mittendrin.
 
 ## 21.8
 
 - [X] Tutorial nächste 2 Kapitel abschliessen
 - [X] Tutorial beenden
-- [X] Testprojekt zum Selberausprobieren erstellen
+- [X] Testprojekt zum Selber ausprobieren erstellen
 
-Heute habe ich als erstes das Tutorial beendet. Dies kann man momentan nicht einsehen, weil ich die Dateien ersetzt habe. Danch habe ich einen kleinen Vermögensrechner erstellt wo man die ein und Ausgaben eingeben kann und sieht wie viel Geld man noch übrig hat.
+Heute habe ich als Erstes das Tutorial beendet. Dies kann man momentan nicht einsehen, weil ich die Dateien ersetzt habe. Dafür habe ich einen kleinen Vermögensrechner erstellt, wo man die Ein- und Ausgaben eingeben kann und sieht, wie viel Geld man noch übrig hat.
 
 ## 28.8
 
@@ -34,11 +34,17 @@ Heute habe ich als erstes das Tutorial beendet. Dies kann man momentan nicht ein
 - [X] Als User möchte ich eine Liste mit den Wörtern sehen, damit ich die verfügbaren Wörter kennenlernen kann.
 - [X] Als User möchte ich ein Wort abgefragt werden können, damit ich es übersetzen kann.
 
-Heute habe ich zuerst ein kleines Startmenü gemacht, damit ich auswählen kann, was ich machen will. Im Menü kann man die ganze Zeit ohne weitere Knöpfe zu drücken zwischen den Seiten wechseln. Danach habe ich eine Wortliste mit 5 einfachen Englisch Wörtern hinzugefügt, für die ich am Ende eine Abfrage gestaltet habe. Dazwischen habe ich eine Anzeige der Wörter mit Übersetzung gemacht, dass man sich die Wörter zuerst anschauen kann. 
+Heute habe ich zuerst ein kleines Startmenü gemacht, damit ich auswählen kann, was ich machen will. Im Menü kann man die ganze Zeit, ohne weitere Knöpfe zu drücken, zwischen den Seiten wechseln. Danach habe ich eine Wortliste mit 5 einfachen Englischwörtern hinzugefügt, für die ich am Ende eine Abfrage gestaltet habe. Dazwischen habe ich eine Anzeige der Wörter mit Übersetzung gemacht, dass man sich die Wörter zuerst anschauen kann. 
 
 ## 4.9
 - [x] Als User möchte ich eine grössere Anzahl Wörter zum Abfragen haben, damit ich nicht nur die gleichen 5 Wörter üben muss.
-- [ ] Als User möchte ich eine andere Sprache zur auswahl haben, damit ich nicht nur englisch lernen muss.
-- [ ] Als user möchte ich, dass jedes Wort zuerst einmal dran kommt bevor eines sich wiederholt, damit ich jedes Wort lernen kann bevor es sich wiederholt
+- [x] Als User möchte ich eine andere Sprache zur Auswahl haben, damit ich nicht nur Englisch lernen muss.
+- [x] Als User möchte ich beide Sprachen in der Wörterliste anzeigen lassen können.
+- [ ] Als User möchte ich, dass jedes Wort zuerst einmal drankommt, bevor eines sich wiederholt, damit ich jedes Wort lernen kann, bevor es sich wiederholt
 
-Heute habe ich zuerst neue Wörter hinzugefügt die man Lernen kann. 
+Heute habe ich zuerst neue Wörter hinzugefügt, die man lernen kann. Danach habe ich eine neue Liste hinzugefügt, mit Wörtern einer neuen Sprache (Französisch). Die neuen Wörter werden nun auch in der Wörterliste angezeigt. Im Abfrage-Tab hat man jetzt die Möglichkeit, zwischen den beiden Sprachen Englisch und Französisch auszuwählen. Wenn man auf Französisch stellt, werden die Wörter einfach noch nicht richtig korrigiert. Da es noch eine recht neue Technologie für mich ist, musste ich viel meiner Zeit verwenden, um zu recherchieren, wie man einzelne Dinge macht. Vor allem bei der Wörterliste musste ich lange suchen.
+
+## 11.9
+- [ ] Als User möchte ich, dass jedes Wort zuerst einmal drankommt, bevor eines sich wiederholt, damit ich jedes Wort lernen kann, bevor es sich wiederholt.
+- [ ] Als User möchte ich, dass gezählt wird, wie viele Wörter ich richtig übersetzt habe.
+- [ ] Als User möchte ich die Möglichkeit haben, die Wörter, die ich falsch hatte, direkt noch einmal zu lernen.
