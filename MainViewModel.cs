@@ -57,13 +57,20 @@ public partial class MainViewModel : ViewModelBase
     };
 
     [ObservableProperty]
-    private Word _currentWord;
-
-    [ObservableProperty]
     private string _userAnswer = "";
 
     [ObservableProperty]
     private string _feedbackText = "";
+
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(CurrentGermanWord))]
+    private Word _currentWord;  
+
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(CurrentGermanWord))]
+    private int _selectedLanguageIndex;   
+
+    public string CurrentGermanWord => SelectedLanguageIndex == 1 ? CurrentWord.GermanF : CurrentWord.GermanE;
 
     public MainViewModel()
     {
@@ -73,16 +80,34 @@ public partial class MainViewModel : ViewModelBase
     [RelayCommand]
     private void CheckAnswer()
     {
-        if (string.Equals(UserAnswer.Trim(), CurrentWord.English, StringComparison.OrdinalIgnoreCase))
+        bool isFrench = SelectedLanguageIndex == 1;
+        string correctAnswer;
+
+        if (isFrench) 
+        { 
+            correctAnswer = CurrentWord.French;
+        }
+        else {  
+            correctAnswer = CurrentWord.English;
+        }
+
+        if (string.Equals(UserAnswer.Trim(), correctAnswer, StringComparison.OrdinalIgnoreCase))
         {
             FeedbackText = "Richtig!";
         }
         else
         {
-            FeedbackText = $"Leider falsch. Richtig wäre: {CurrentWord.English}";
+            FeedbackText = $"Leider falsch. Richtig wäre: {correctAnswer}";
         }
 
         UserAnswer = "";
-        CurrentWord = WordsE[_random.Next(WordsE.Count)];
+        PickNewWord();
+    }
+
+    private void PickNewWord()
+    {
+        CurrentWord = SelectedLanguageIndex == 1
+            ? WordsF[_random.Next(WordsF.Count)]
+            : WordsE[_random.Next(WordsE.Count)];
     }
 }

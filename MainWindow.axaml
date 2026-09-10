@@ -60,14 +60,14 @@
 
     <TabItem Header="Abfrage">
         <StackPanel Margin="20" Spacing="15">
-            <ComboBox x:Name="LanguageCombo" SelectedIndex="0" HorizontalAlignment="Left">
+            <ComboBox x:Name="LanguageCombo" SelectedIndex="{Binding SelectedLanguageIndex, Mode=TwoWay}" HorizontalAlignment="Left">
         <ComboBoxItem Content="Englisch" />
         <ComboBoxItem Content="Französisch" />
     </ComboBox>
     <TextBlock x:CompileBindings="False"
            Text="{Binding #LanguageCombo.SelectedItem.Content, StringFormat='Wie heisst dieses Wort auf {0}?'}" />
-                <TextBlock Text="{Binding CurrentWord.GermanE}" FontSize="24" FontWeight="Bold" />
-                <TextBox Text="{Binding UserAnswer}" Watermark="Deine Antwort" />
+                <TextBlock Text="{Binding CurrentGermanWord}" FontSize="24" FontWeight="Bold" />
+            <TextBox Text="{Binding UserAnswer}" Watermark="Deine Antwort" />
             <Button Content="Prüfen" Command="{Binding CheckAnswerCommand}" />
             <TextBlock Text="{Binding FeedbackText}" TextWrapping="Wrap" />
         </StackPanel>
