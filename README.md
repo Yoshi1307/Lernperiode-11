@@ -45,6 +45,8 @@ Heute habe ich zuerst ein kleines Startmenü gemacht, damit ich auswählen kann,
 Heute habe ich zuerst neue Wörter hinzugefügt, die man lernen kann. Danach habe ich eine neue Liste hinzugefügt, mit Wörtern einer neuen Sprache (Französisch). Die neuen Wörter werden nun auch in der Wörterliste angezeigt. Im Abfrage-Tab hat man jetzt die Möglichkeit, zwischen den beiden Sprachen Englisch und Französisch auszuwählen. Wenn man auf Französisch stellt, werden die Wörter einfach noch nicht richtig korrigiert. Da es noch eine recht neue Technologie für mich ist, musste ich viel meiner Zeit verwenden, um zu recherchieren, wie man einzelne Dinge macht. Vor allem bei der Wörterliste musste ich lange suchen.
 
 ## 11.9
+- [X] Als User möchte ich, dass die Französischen Wörter richtig korrigiert werden.
 - [ ] Als User möchte ich, dass jedes Wort zuerst einmal drankommt, bevor eines sich wiederholt, damit ich jedes Wort lernen kann, bevor es sich wiederholt.
 - [ ] Als User möchte ich, dass gezählt wird, wie viele Wörter ich richtig übersetzt habe.
-- [ ] Als User möchte ich die Möglichkeit haben, die Wörter, die ich falsch hatte, direkt noch einmal zu lernen.
+
+Beim Lösen des ersten Arbeitspaketes musste ich die Funktion zum Überprüfen der Antwort anpassen und ein paar Variablen und Funktionen ergänzen. Jetzt korrigiert die App Englisch und Französisch.
