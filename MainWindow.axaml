@@ -4,11 +4,13 @@
         xmlns:models="using:VociTrainer.Models"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="320" d:DesignHeight="450"
         x:Class="VociTrainer.Views.MainWindow"
         x:DataType="vm:MainViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="VociTrainer">
+        Title="VociTrainer"
+        Width="320" 
+        Height="500">
 
     <Design.DataContext>
         <vm:MainViewModel />
@@ -66,10 +68,12 @@
     </ComboBox>
     <TextBlock x:CompileBindings="False"
            Text="{Binding #LanguageCombo.SelectedItem.Content, StringFormat='Wie heisst dieses Wort auf {0}?'}" />
-                <TextBlock Text="{Binding CurrentGermanWord}" FontSize="24" FontWeight="Bold" />
+            <TextBlock Text="Fehler-Runde" FontWeight="Bold" Foreground="Red" IsVisible="{Binding IsFehlerrunde}" />
+            <TextBlock Text="{Binding CurrentGermanWord}" FontSize="24" FontWeight="Bold" />
             <TextBox Text="{Binding UserAnswer}" Watermark="Deine Antwort" />
             <Button Content="Prüfen" Command="{Binding CheckAnswerCommand}" />
             <TextBlock Text="{Binding FeedbackText}" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding ScoreText}" FontWeight="Bold" />
         </StackPanel>
     </TabItem>
     </TabControl>

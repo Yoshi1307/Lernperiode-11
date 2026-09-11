@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using VociTrainer.Models;
-
 namespace VociTrainer.ViewModels;
 
 public partial class MainViewModel : ViewModelBase
 {
     private readonly Random _random = new();
+    [ObservableProperty]
+    private bool _isFehlerrunde = false;
 
     public ObservableCollection<Word> WordsE { get; } = new()
     {
@@ -36,7 +38,7 @@ public partial class MainViewModel : ViewModelBase
 
     public ObservableCollection<Word> WordsF { get; } = new()
     {
-              new Word { GermanF = "Haus", French = "maison" },
+        new Word { GermanF = "Haus", French = "maison" },
         new Word { GermanF = "Hund", French = "chien" },
         new Word { GermanF = "Katze", French = "chat" },
         new Word { GermanF = "Buch", French = "livre" },
@@ -56,6 +58,12 @@ public partial class MainViewModel : ViewModelBase
         new Word { GermanF = "Stadt", French = "ville" },
     };
 
+    private readonly List<Word> _remainingWordsE = new();
+    private readonly List<Word> _remainingWordsF = new();
+
+    private readonly List<Word> _wrongE = new();
+    private readonly List<Word> _wrongF = new();
+
     [ObservableProperty]
     private string _userAnswer = "";
 
@@ -63,18 +71,50 @@ public partial class MainViewModel : ViewModelBase
     private string _feedbackText = "";
 
     [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(ScoreText))]
+    private int _ScoreE = 0;
+
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(ScoreText))]
+    private int _ScoreF = 0;
+
+    public string ScoreText => $"Score: {_ScoreE} (Englisch), {_ScoreF} (Französisch)";
+
+    [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(CurrentGermanWord))]
     private Word _currentWord;  
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(CurrentGermanWord))]
-    private int _selectedLanguageIndex;   
+    private int _selectedLanguageIndex;
 
-    public string CurrentGermanWord => SelectedLanguageIndex == 1 ? CurrentWord.GermanF : CurrentWord.GermanE;
+    public string CurrentGermanWord
+    {
+        get
+        {
+            if (SelectedLanguageIndex == 1)
+            {
+                return CurrentWord.GermanF;
+            }
+            else
+            {
+                return CurrentWord.GermanE;
+            }
+        }
+    }
+
+    private void Shuffle(List<Word> list)
+    {
+        for (int i = list.Count - 1; i > 0; i--)
+        {
+            int j = _random.Next(i + 1);
+            (list[i], list[j]) = (list[j], list[i]);
+        }
+    }
 
     public MainViewModel()
     {
-        _currentWord = WordsE[_random.Next(WordsE.Count)];
+        PickNewWord();
     }
 
     [RelayCommand]
@@ -91,13 +131,28 @@ public partial class MainViewModel : ViewModelBase
             correctAnswer = CurrentWord.English;
         }
 
-        if (string.Equals(UserAnswer.Trim(), correctAnswer, StringComparison.OrdinalIgnoreCase))
+        if (string.Equals(UserAnswer.Trim(), correctAnswer))
         {
             FeedbackText = "Richtig!";
+            if ((isFrench))
+            {
+                ScoreF++;
+            } else
+            {
+                ScoreE++;
+            }
         }
         else
         {
             FeedbackText = $"Leider falsch. Richtig wäre: {correctAnswer}";
+            if (isFrench && !_wrongF.Contains(CurrentWord))
+            {
+                _wrongF.Add(CurrentWord);
+            }
+            else if (!isFrench && !_wrongE.Contains(CurrentWord))
+            {
+                _wrongE.Add(CurrentWord);
+            }
         }
 
         UserAnswer = "";
@@ -106,8 +161,50 @@ public partial class MainViewModel : ViewModelBase
 
     private void PickNewWord()
     {
-        CurrentWord = SelectedLanguageIndex == 1
-            ? WordsF[_random.Next(WordsF.Count)]
-            : WordsE[_random.Next(WordsE.Count)];
+        List<Word> remaining;
+        ObservableCollection<Word> source;
+
+        if (SelectedLanguageIndex == 1)
+        {
+            remaining = _remainingWordsF;
+            source = WordsF;
+        }
+        else
+        {
+            remaining = _remainingWordsE;
+            source = WordsE;
+        }
+
+        if (remaining.Count == 0)
+        {
+            List<Word> wrongList;
+
+            if (SelectedLanguageIndex == 1)
+            {
+                wrongList = _wrongF;
+            }
+            else
+            {
+                wrongList = _wrongE;
+            }
+
+            if (wrongList.Count > 0)
+            {
+                remaining.AddRange(wrongList);
+                wrongList.Clear();
+                IsFehlerrunde = true;
+            }
+            else
+            {
+                remaining.AddRange(source);
+                IsFehlerrunde = false;
+            }
+
+            Shuffle(remaining);
+        }
+
+        int lastIndex = remaining.Count - 1;
+        CurrentWord = remaining[lastIndex];
+        remaining.RemoveAt(lastIndex);
     }
 }
