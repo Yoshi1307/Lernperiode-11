@@ -6,8 +6,6 @@ In dieser Lernperiode habe ich einen VokabelTrainer erstellt.Der VociTrainer ist
 
 Im Bereich "Abfrage" kann zwischen Englisch und Französisch gewählt werden. Die Applikation zeigt dann ein deutsches Wort an, das in der gewählten Sprache übersetzt werden muss. 
 Damit jedes Wort zuerst einmal abgefragt wird, bevor sich eines wiederholt, werden die Wörter pro Durchgang zufällig gemischt und erst nach einer vollständigen Runde neu gemischt. Falsch beantwortete Wörter werden zusätzlich gesammelt und in einer eigenen Fehler-Runde am Ende erneut abgefragt, bis sie richtig beantwortet wurden. Zusätzlich zeigt die Applikation einen laufenden Score für die richtig beantworteten englischen und französischen Wörter an.
-
-
 <img width="480" height="784" alt="VociTrainer" src="https://github.com/user-attachments/assets/253ecdbd-68c2-4aa5-ba25-55782cf189fd" />
 
 
