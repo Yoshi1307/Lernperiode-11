@@ -1,5 +1,16 @@
 # Lernperiode 11
 
+
+## Fertiges Projekt
+In dieser Lernperiode habe ich einen VokabelTrainer erstellt.Der VociTrainer ist eine einfache Desktop-Applikation, mit der Vokabeln zwischen Deutsch, Englisch und Französisch geübt werden können. Auf einer Startseite erhält man einen Überblick über die Applikation, während im Bereich "Wortliste" alle hinterlegten deutsch-englischen und deutsch-französischen Wortpaare angezeigt werden.
+
+Im Bereich "Abfrage" kann zwischen Englisch und Französisch gewählt werden. Die Applikation zeigt dann ein deutsches Wort an, das in der gewählten Sprache übersetzt werden muss. 
+Damit jedes Wort zuerst einmal abgefragt wird, bevor sich eines wiederholt, werden die Wörter pro Durchgang zufällig gemischt und erst nach einer vollständigen Runde neu gemischt. Falsch beantwortete Wörter werden zusätzlich gesammelt und in einer eigenen Fehler-Runde am Ende erneut abgefragt, bis sie richtig beantwortet wurden. Zusätzlich zeigt die Applikation einen laufenden Score für die richtig beantworteten englischen und französischen Wörter an.
+
+
+<img width="480" height="784" alt="VociTrainer" src="https://github.com/user-attachments/assets/253ecdbd-68c2-4aa5-ba25-55782cf189fd" />
+
+
 14.8 bis 11.9.2024
 
 ## Grob-Planung
@@ -46,7 +57,7 @@ Heute habe ich zuerst neue Wörter hinzugefügt, die man lernen kann. Danach hab
 
 ## 11.9
 - [X] Als User möchte ich, dass die Französischen Wörter richtig korrigiert werden.
-- [ ] Als User möchte ich, dass jedes Wort zuerst einmal drankommt, bevor eines sich wiederholt, damit ich jedes Wort lernen kann, bevor es sich wiederholt.
-- [ ] Als User möchte ich, dass gezählt wird, wie viele Wörter ich richtig übersetzt habe.
+- [X] Als User möchte ich, dass jedes Wort zuerst einmal drankommt, bevor eines sich wiederholt, damit ich jedes Wort lernen kann, bevor es sich wiederholt.
+- [X] Als User möchte ich, dass gezählt wird, wie viele Wörter ich richtig übersetzt habe.
 
-Beim Lösen des ersten Arbeitspaketes musste ich die Funktion zum Überprüfen der Antwort anpassen und ein paar Variablen und Funktionen ergänzen. Jetzt korrigiert die App Englisch und Französisch.
+Beim Lösen des ersten Arbeitspaketes musste ich die Funktion zum Überprüfen der Antwort anpassen und ein paar Variablen und Funktionen ergänzen. Jetzt korrigiert die App Englisch und Französisch. Danach habe ich hinzugefügt, dass Wörter sich nicht wiederholen bevor alle einmal dran waren. Anschliessen habe ich noch eine kleine Punkteanzeige hinzugefügt, die mitzählt, wie viel Wörter man richtig übersetzt hat. Die Punkte werden Pro Sprache angezeigt. Zum Schluss habe ich noch eine Fehlerrunde hinzugefügt. Also wenn alle Wörter einmal durch sind werden zuerst nochmal alle falschen abgefragt.
